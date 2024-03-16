@@ -1,0 +1,25 @@
+{
+    "name": "eternative",
+    "version": "1.0.0",
+    "description": "A library that transforms Tailwind CSS inspired style classes into React Native styles",
+    "main": "src/index.ts",
+    "types": "src/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/native90/eternative.git"
+    },
+    "keywords": [
+        "react-native",
+        "tailwind",
+        "styles"
+    ],
+    "author": "native90",
+    "license": "MIT",
+    "dependencies": {
+        "react": "18.2.0",
+        "react-native": "0.73.6"
+    }
+}
