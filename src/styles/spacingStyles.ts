@@ -21,8 +21,19 @@ function invertValues(obj: any) {
 
   return result;
 }
+export const baseSpacingStyles = {
+  "mx-auto": {
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  "ml-auto": {
+    marginLeft: "auto",
+  },
+  "mr-auto": {
+    marginRight: "auto",
+  },
+};
 
-// Ejemplo de uso para padding
 export const paddingStyles = generateClasses({
   property: 'padding',
   prefix: 'p',

@@ -8,7 +8,7 @@ interface SafeAreaViewProps extends ViewProps {
 
 const SafeAreaView: React.FC<SafeAreaViewProps> = ({styleName, children}) => {
   return (
-    <RNSafeAreaView style={styleNameToNative(`flex-1 ${styleName}`)}>
+    <RNSafeAreaView style={styleNameToNative(`${styleName}`)}>
       {children}
     </RNSafeAreaView>
   );
