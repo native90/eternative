@@ -17,9 +17,5 @@
         "styles"
     ],
     "author": "native90",
-    "license": "MIT",
-    "dependencies": {
-        "react": "18.2.0",
-        "react-native": "0.73.6"
-    }
+    "license": "MIT"
 }
