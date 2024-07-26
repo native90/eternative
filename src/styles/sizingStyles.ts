@@ -5,10 +5,11 @@ import {
 import {sizing as values} from './sizing';
 
 export const baseSizesStyles = {
-  'w-full': {width: '100%'},
-  'h-full': {height: '100%'},
-  'w-screen': {width: '100vw'},
-  'h-screen': {height: '100vh'},
+  "w-auto": { width: "auto" },
+  "w-full": { width: "100%" },
+  "h-full": { height: "100%" },
+  "w-screen": { width: "100vw" },
+  "h-screen": { height: "100vh" },
 };
 
 export const widhtStyles = generateClasses({

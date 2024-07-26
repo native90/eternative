@@ -1,9 +1,9 @@
-export {default as Text} from './elements/Text';
-export {default as ImageBackground} from './elements/ImageBackground';
-export {default as View} from './elements/View';
-export {default as TouchableOpacity} from './elements/TouchableOpacity';
-export {default as SafeAreaView} from './elements/SafeAreaView';
-export {default as TextInput} from './elements/TextInput';
-export {default as Image} from './elements/Image';
-export {default as ScrollView} from './elements/ScrollView';
-export {styleNameToNative as styleNameTo} from './functions/styleNameToNative';
+export { default as Text } from "./elements/Text";
+export { default as ImageBackground } from "./elements/ImageBackground";
+export { default as View } from "./elements/View";
+export { default as TouchableOpacity } from "./elements/TouchableOpacity";
+export { default as SafeAreaView } from "./elements/SafeAreaView";
+export { default as TextInput } from "./elements/TextInput";
+export { default as Image } from "./elements/Image";
+export { default as ScrollView } from "./elements/ScrollView";
+export { styleNameToNative as eterStyle } from "./functions/styleNameToNative";
