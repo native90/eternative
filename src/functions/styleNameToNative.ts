@@ -7,11 +7,19 @@ import * as colorStyles from '../styles/colorStyles';
 import * as textStyles from '../styles/textStyles';
 import * as transformStyles from '../styles/transformStyles';
 import {Appearance, Platform} from 'react-native';
+import { userColors } from "./userConfig";
+import { generateColorClasses } from "./generateClasses";
 
 const colorScheme = Appearance.getColorScheme();
-const isDarkMode = colorScheme === 'dark';
-const isIos = Platform.OS === 'ios';
-const isAndroid = Platform.OS === 'android';
+const isDarkMode = colorScheme === "dark";
+const isIos = Platform.OS === "ios";
+const isAndroid = Platform.OS === "android";
+
+const customColors = {};
+
+Object.keys(userColors)?.map((colorKey) => {
+  customColors[colorKey] = generateColorClasses(userColors[colorKey], colorKey);
+});
 
 const combined = (data: any) => {
   const objs = Object.assign({}, ...data);
@@ -30,6 +38,7 @@ export const styleNameToNative = (tailwindClasses = '') => {
     colorStyles,
     textStyles,
     transformStyles,
+    customColors,
   ]);
 
   // Dividir las clases por espacio y aplicar los estilos correspondientes
