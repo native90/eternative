@@ -1,3 +1,5 @@
+import invertValues from "../functions/invertValues";
+
 export const sizing = {
   0: 0,
   0.5: 2, // 2px
@@ -35,3 +37,5 @@ export const sizing = {
   96: 384, // 384px
   100: 400, // 400px
 };
+
+export const invertedSizing = invertValues(sizing);

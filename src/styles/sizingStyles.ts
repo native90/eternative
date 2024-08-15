@@ -2,7 +2,7 @@ import {
   generateClassSizes,
   generateClasses,
 } from '../functions/generateClasses';
-import {sizing as values} from './sizing';
+import { invertedSizing, sizing as values } from "./sizing";
 
 export const baseSizesStyles = {
   "w-auto": { width: "auto" },
@@ -71,3 +71,28 @@ export const rightStyles = generateClasses({
   prefix: 'right',
   values,
 });
+
+export const bottomInvertStyles = generateClasses({
+  property: "bottom",
+  prefix: "-bottom",
+  values: invertedSizing,
+});
+
+export const topInvertStyles = generateClasses({
+  property: "top",
+  prefix: "-top",
+  values: invertedSizing,
+});
+
+export const leftInvertStyles = generateClasses({
+  property: "left",
+  prefix: "-left",
+  values: invertedSizing,
+});
+
+export const rightInvertStyles = generateClasses({
+  property: "right",
+  prefix: "-right",
+  values: invertedSizing,
+});
+

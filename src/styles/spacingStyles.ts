@@ -1,5 +1,5 @@
 import {generateClasses} from '../functions/generateClasses';
-import {sizing as values} from './sizing';
+import { invertedSizing, sizing as values } from "./sizing";
 
 const suffixes: any = {
   t: 'Top',
@@ -10,17 +10,7 @@ const suffixes: any = {
   x: 'Horizontal',
 };
 
-function invertValues(obj: any) {
-  const result: any = {};
 
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      result[key] = -obj[key];
-    }
-  }
-
-  return result;
-}
 export const baseSpacingStyles = {
   "mx-auto": {
     marginLeft: "auto",
@@ -49,8 +39,8 @@ export const marginStyles = generateClasses({
 });
 
 export const marginNegative = generateClasses({
-  property: 'margin',
-  prefix: '-m',
+  property: "margin",
+  prefix: "-m",
   suffixes,
-  values: invertValues(values),
+  values: invertedSizing,
 });
