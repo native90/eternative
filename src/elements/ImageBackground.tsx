@@ -10,14 +10,16 @@ interface ImageBackgroundProps extends RNImageBackgroundProps {
 }
 
 const ImageBackground: React.FC<ImageBackgroundProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   children,
   ...otherProps
 }) => {
   return (
     <RNImageBackground
-      style={styleNameToNative(styleName as any)}
-      {...otherProps}>
+      style={[styleNameToNative(styleName as any), style]}
+      {...otherProps}
+    >
       {children}
     </RNImageBackground>
   );

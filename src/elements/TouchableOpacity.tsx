@@ -10,14 +10,16 @@ interface TouchableOpacityProps extends RNTouchableOpacityProps {
 }
 
 const TouchableOpacity: React.FC<TouchableOpacityProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   children,
   ...otherProps
 }) => {
   return (
     <RNTouchableOpacity
-      style={styleNameToNative(styleName as any)}
-      {...otherProps}>
+      style={[styleNameToNative(styleName as any), style]}
+      {...otherProps}
+    >
       {children}
     </RNTouchableOpacity>
   );

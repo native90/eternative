@@ -6,9 +6,16 @@ interface ImageProps extends RNImageProps {
   styleName?: string;
 }
 
-const Image: React.FC<ImageProps> = ({styleName = '', ...otherProps}) => {
+const Image: React.FC<ImageProps> = ({
+  styleName = "",
+  style,
+  ...otherProps
+}) => {
   return (
-    <RNImage style={styleNameToNative(styleName as any)} {...otherProps} />
+    <RNImage
+      style={[styleNameToNative(styleName as any), style]}
+      {...otherProps}
+    />
   );
 };
 

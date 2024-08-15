@@ -7,12 +7,13 @@ interface TextProps extends RNTextProps {
 }
 
 const Text: React.FC<TextProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   children,
   ...otherProps
 }) => {
   return (
-    <RNText style={styleNameToNative(styleName as any)} {...otherProps}>
+    <RNText style={[styleNameToNative(styleName as any), style]}>
       {children}
     </RNText>
   );

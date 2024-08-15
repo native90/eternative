@@ -12,12 +12,17 @@ interface FlatListProps extends RNFlatListProps<RNFlatList> {
   renderItem: ListRenderItem<RNFlatList> | null | undefined;
 }
 
-const FlatList: React.FC<FlatListProps> = ({styleName, data, renderItem}) => {
+const FlatList: React.FC<FlatListProps> = ({
+  styleName,
+  data,
+  renderItem,
+  style,
+}) => {
   return (
     <RNFlatList
       data={data}
       renderItem={renderItem}
-      style={styleNameToNative(`${styleName}`)}
+      style={[styleNameToNative(`${styleName}`), style]}
     />
   );
 };

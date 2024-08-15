@@ -10,12 +10,13 @@ interface ScrollViewProps extends RNScrollViewProps {
 }
 
 const ScrollView: React.FC<ScrollViewProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   children,
   ...otherProps
 }) => {
   return (
-    <RNScrollView style={styleNameToNative(styleName as any)} {...otherProps}>
+    <RNScrollView style={[styleNameToNative(styleName as any), style]}>
       {children}
     </RNScrollView>
   );

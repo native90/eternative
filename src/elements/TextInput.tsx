@@ -10,11 +10,15 @@ interface TextInputProps extends RNTextInputProps {
 }
 
 const TextInput: React.FC<TextInputProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   ...otherProps
 }) => {
   return (
-    <RNTextInput style={styleNameToNative(styleName as any)} {...otherProps} />
+    <RNTextInput
+      style={[styleNameToNative(styleName as any), style]}
+      {...otherProps}
+    />
   );
 };
 

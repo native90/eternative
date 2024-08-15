@@ -7,12 +7,16 @@ interface ViewProps extends RNViewProps {
 }
 
 const View: React.FC<ViewProps> = ({
-  styleName = '',
+  styleName = "",
+  style,
   children,
   ...otherProps
 }) => {
   return (
-    <RNView style={styleNameToNative(styleName as any)} {...otherProps}>
+    <RNView
+      style={[styleNameToNative(styleName as any), style]}
+      {...otherProps}
+    >
       {children}
     </RNView>
   );
