@@ -8,8 +8,12 @@ interface GenerateClassesOptions {
 const styleColorDefinitions = [
   ["bg", "backgroundColor"],
   ["text", "color"],
-  ["border", "borderColor"],
   ["tint", "tintColor"],
+  ["border", "borderColor"],
+  ["boder-t", "borderTopColor"],
+  ["boder-r", "borderRightColor"],
+  ["boder-b", "borderBottomColor"],
+  ["boder-l", "borderLeftColor"],
 ];
 
 export const generateColorClasses = (
