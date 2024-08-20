@@ -7,3 +7,4 @@ export { default as TextInput } from "./elements/TextInput";
 export { default as Image } from "./elements/Image";
 export { default as ScrollView } from "./elements/ScrollView";
 export { styleNameToNative as eterStyle } from "./functions/styleNameToNative";
+export { initializeEternative } from "./functions/styleNameToNative";
