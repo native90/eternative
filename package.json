@@ -1,6 +1,6 @@
 {
     "name": "eternative",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "A library that transforms Tailwind CSS inspired style classes into React Native styles",
     "main": "src/index.ts",
     "types": "src/index.d.ts",
