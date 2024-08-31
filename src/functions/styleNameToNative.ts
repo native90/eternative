@@ -16,28 +16,30 @@ const isAndroid = Platform.OS === "android";
 
 // Variable para almacenar colores personalizados
 let customColors = {};
+let styleMap = {};
 
 export const initializeEternative = (config = {}) => {
   const userColors = config.theme?.colors || {};
 
   customColors = {}; // Reiniciar customColors cada vez que se inicializa
 
-  Object.keys(userColors)?.map((colorKey) => {
+  Object.keys(userColors)?.forEach((colorKey) => {
     customColors[colorKey] = generateColorClasses(
       userColors[colorKey],
       colorKey
     );
   });
+
+  updateStyleMap(); // Actualiza el styleMap con los nuevos colores
 };
 
-const combined = (data) => {
+const combineStyles = (data) => {
   const objs = Object.assign({}, ...data);
-  const styleMap = Object.assign({}, ...Object.values(objs));
-  return styleMap;
+  return Object.assign({}, ...Object.values(objs));
 };
 
-export const styleNameToNative = (tailwindClasses = "") => {
-  const styleMap = combined([
+const updateStyleMap = () => {
+  styleMap = combineStyles([
     flexStyles,
     layoutStyles,
     sizingStyles,
@@ -48,7 +50,12 @@ export const styleNameToNative = (tailwindClasses = "") => {
     transformStyles,
     customColors,
   ]);
+};
 
+// Inicializar el styleMap al cargar la librería
+updateStyleMap();
+
+export const styleNameToNative = (tailwindClasses = "") => {
   const styles = tailwindClasses
     ?.split?.(" ")
     ?.map?.((className) => {
